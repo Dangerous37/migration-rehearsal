@@ -1,0 +1,8 @@
+{
+  "fixture_sql": "CREATE TABLE orders(id INTEGER PRIMARY KEY, paid INTEGER); INSERT INTO orders VALUES(1,230),(2,540);",
+  "migration_sql": "ALTER TABLE orders ADD COLUMN stage TEXT DEFAULT 'open';",
+  "checks": {
+    "count": "SELECT count(*) FROM orders",
+    "captured": "SELECT sum(paid) FROM orders"
+  }
+}

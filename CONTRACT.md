@@ -1,0 +1,2 @@
+# Contract
+Specify source (path to a trusted SQLite database opened read-only) or fixture_sql (trusted SQL), migration_sql and checks mapping descriptive names to read-only SELECT queries. Each invariant query must return one row and one column. The value must remain identical before and after and foreign_key_check must be empty. A failing migration returns passed=false. Input SQL is intended for trusted developers.
